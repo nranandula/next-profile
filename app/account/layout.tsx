@@ -1,4 +1,4 @@
-import AccountHeader from "./header/AccountHeader";
+import AccountHeader from "./components/header/AccountHeader";
 
 export default function RootLayout({
     children,
@@ -8,7 +8,7 @@ export default function RootLayout({
     return (
         <div>
             <AccountHeader/>
-            <section className="px-5">
+            <section className="pt-5">
                 {children}
             </section>
         </div>

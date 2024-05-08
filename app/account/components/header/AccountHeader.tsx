@@ -4,11 +4,10 @@ export default function AccountHeader() {
     const navLinks = [
         { linkLable: "Profile", linkUrl: "/account/profile" },
         { linkLable: "Engagement", linkUrl: "/account/engagement" },
-        { linkLable: "Settings", linkUrl: "#" },
-        { linkLable: "Membership", linkUrl: "#" }
+        { linkLable: "Settings", linkUrl: "/account/settings" }
     ]
     return (
-        <div className="flex flex-col py-5">
+        <div className="flex flex-col pt-5 bg-white">
             <div className="flex flex-row w-full align-middle gap-x-8 mb-4 px-5">
                 <div className="rounded-full w-24 h-24 overflow-hidden">
                     <img className="object-cover" src="/blank-profile-picture.png" alt="Profile Picture" />

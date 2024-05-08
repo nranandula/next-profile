@@ -6,7 +6,57 @@
   .bd-card {
     @apply shadow-md max-w-md mx-auto bg-bdTeal rounded-xl text-gray-700
   }
-  .bd-card-header{
+
+  .engagement-card {
+    @apply shadow-md max-w-sm border-bdTeal border-[1px] rounded-xl text-gray-700
+  }
+  .engagement-card-md {
+    @apply shadow-md max-w-md bg-white rounded-xl text-gray-700
+  }
+
+  .settings-card {
+    @apply shadow-md max-w-sm border-bdTeal border-[1px] bg-white mx-auto rounded-xl text-gray-700
+  }
+
+  .bd-card-header {
     @apply text-center pt-5 font-bold text-3xl text-bgYellow
+  }
+  .settings-card-header {
+    @apply text-center pt-5 font-bold text-3xl text-gray-700
+  }
+
+  .primaryBtn {
+    @apply bg-primaryBtn text-bgYellow p-3 text-center rounded-xl border-white border-[1px]
+  }
+  .primaryBtn-small{
+    @apply primaryBtn px-2 py-1
+  }
+
+  .primaryBtn:hover {
+    @apply bg-btnHover
+  }
+  
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    @apply w-full p-2 border-gray-300 rounded-lg border-[1px]
+  }
+  body{
+    background: #efefef;
+  }
+  .two-line-ellipse {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+  .custom-div::-webkit-scrollbar {
+    width: 0;
+  }
+  .custom-div{
+    overflow-x: auto;
   }
 }

@@ -12,8 +12,9 @@ export default async function Reviews(){
     const data = await response.json();
     const reviews = data.userReviews
     return (
-        <>
-            {
+        <div className="flex flex-row gap-x-2 pb-2 custom-div">
+            {/* vertical version */}
+            {/* {
                 reviews.map((review: Review, index:number) => (
                     <div className="flex flex-col gap-y-1 pb-2" key={review.id}>
                         <div className="flex flex-row justify-between align-middle">
@@ -27,7 +28,41 @@ export default async function Reviews(){
                         {index < reviews.length - 1 && <hr className="border-gray-200 my-2" />}
                     </div>
                 ))
+            } */}
+
+            {/* Horizontal version */}
+             {
+                reviews.map((review: Review, index:number) => (
+
+                    <div className="flex flex-col gap-y-3 p-2 engagement-card" key={review.id}>
+                        <div className="flex flex-row justify-between align-middle">
+                            <div className="flex flex-col gap-y-1">
+                                <p className="font-bold">{review.author}</p>
+                                <p className="text-[12px]">{review.date_posted}</p>
+                            </div>
+                            <p className="font-bold">{review.rating}/5</p>
+                        </div>
+                        <p className="two-line-ellipse">{review.description}</p>
+                    </div>
+                    
+                ))
             }
-        </>
+             {
+                reviews.map((review: Review, index:number) => (
+
+                    <div className="flex flex-col gap-y-3 p-2 engagement-card" key={review.id}>
+                        <div className="flex flex-row justify-between align-middle">
+                            <div className="flex flex-col gap-y-1">
+                                <p className="font-bold">{review.author}</p>
+                                <p className="text-[12px]">{review.date_posted}</p>
+                            </div>
+                            <p className="font-bold">{review.rating}/5</p>
+                        </div>
+                        <p className="two-line-ellipse">{review.description}</p>
+                    </div>
+                    
+                ))
+            }
+        </div>
     )
 }
