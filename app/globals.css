@@ -3,7 +3,53 @@
 @tailwind utilities;
 
 @layer components {
-  .bd-card {
+  .bd-card{
+    @apply shadow-md bg-white rounded-xl text-gray-700
+  }
+
+  .bd-card-with-border{
+    @apply shadow-md border-bdTeal border-[1px] bg-white rounded-xl text-gray-700
+  }
+
+  .engagement-dashboard-card{
+    @apply shadow-md max-w-sm border-bdTeal border-[1px] rounded-xl text-gray-700 min-w-60
+  }
+
+  .engagement-dashboard-card-container::-webkit-scrollbar {
+    @apply w-0 h-0
+  }
+  .engagement-dashboard-card-container{
+    @apply overflow-x-auto
+  }
+
+  .engagement-dashboard-pill{
+    @apply border-bdTeal border-[1px] rounded-xl py-2 px-4
+  }
+  .engagement-dashboard-pill-selected{
+    @apply  bg-primaryBtn text-bgYellow text-center rounded-xl border-white border-[1px]
+  }
+
+  .primaryBtn {
+    @apply bg-primaryBtn text-bgYellow p-3 text-center rounded-xl border-white border-[1px]
+  }
+  .primaryBtn-small{
+    @apply primaryBtn px-2 py-1
+  }
+
+  .primaryBtn:hover {
+    @apply bg-btnHover
+  }
+
+  .primaryLink{
+    @apply text-primaryBtn text-[14px]
+  }
+  .primaryLink:hover{
+    @apply text-btnHover
+  }
+
+  /* =============================== */
+
+  .bd-card-deprecated {
     @apply shadow-md max-w-md mx-auto bg-bdTeal rounded-xl text-gray-700
   }
 
@@ -25,20 +71,14 @@
     @apply text-center pt-5 font-bold text-3xl text-gray-700
   }
 
-  .primaryBtn {
-    @apply bg-primaryBtn text-bgYellow p-3 text-center rounded-xl border-white border-[1px]
-  }
-  .primaryBtn-small{
-    @apply primaryBtn px-2 py-1
-  }
-
-  .primaryBtn:hover {
-    @apply bg-btnHover
-  }
   
+  /* .skeleton {
+    @apply 'before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:bg-white/60 before:to-transparent';
+  } */
 
   input[type="text"],
   input[type="email"],
+  input[type="password"],
   textarea {
     @apply w-full p-2 border-gray-300 rounded-lg border-[1px]
   }
@@ -50,6 +90,14 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+  .three-line-ellipse {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
     text-overflow: ellipsis;
     white-space: normal;
   }
