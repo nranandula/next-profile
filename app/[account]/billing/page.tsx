@@ -17,12 +17,12 @@ export default function BillingPage() {
     ]
     return (
         <div className="mx-4 pb-5">
-            <div className="flex flex-col gap-y-5 bd-card max-w-md mx-auto bd-card-with-border px-3">
-                <div className="flex flex-col gap-y-5">
-                    <p className="pt-4">Please select a card below and click on Enroll button to subscribe to Premium Membership.</p>
+            <div className="flex flex-col sm:flex-row sm:gap-x-5 gap-y-5 bd-card max-w-md sm:max-w-3xl mx-auto bd-card-with-border px-3">
+                <div className="flex flex-col gap-y-5 sm:flex-1">
+                    <h2 className="font-bold text-[18px] pt-4">Premium Membership</h2>
+                    <p>Please select a card below and click on Enroll button to subscribe to Premium Membership.</p>
                     <p>To add/use a different card, please provide the card information in the Add New Card section and click on Add and Enroll button </p>
-                    <h2 className="font-bold text-[18px]">Select a Payment Method</h2>
-                    <div className="flex flex-col gap-y-5 px-5">
+                    <div className="flex flex-col gap-y-5 px-5 sm:px-0">
                         {cardsOnFile.map((card)=>(
                             <div key={card.id} className="bd-card border-gray-400 border-[1px] p-2">
                                 <CardInfoField cardInfo={card}/>
@@ -31,7 +31,7 @@ export default function BillingPage() {
                         <button className="primaryBtn">Enroll</button>
                     </div>
                 </div>
-                <div className="flex flex-col gap-y-5 border-gray-400 border-t-[1px] py-5 mt-4">
+                <div className="flex flex-col gap-y-5 border-gray-400 border-t-[1px] py-5 mt-4 sm:flex-1 sm:border-none sm:mt-0">
                     <h2 className="font-bold text-[18px]">Add New Payment</h2>
                     <PaymentForm buttonLabel="Add and Enroll"/>
                 </div>
