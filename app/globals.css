@@ -12,7 +12,7 @@
   }
 
   .engagement-dashboard-card{
-    @apply shadow-md max-w-sm border-bdTeal border-[1px] rounded-xl text-gray-700 min-w-60
+    @apply shadow-md sm:max-w-sm border-bdTeal border-[1px] rounded-xl text-gray-700 min-w-60
   }
 
   .engagement-dashboard-card-container::-webkit-scrollbar {

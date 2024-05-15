@@ -15,7 +15,7 @@ export default function DashboardCard({messages}:{messages:Array<any>}) {
         <div className="flex flex-row items-stretch gap-x-2">
             <button className="primaryBtn-small md:max-lg:block hidden" onClick={()=>handleScroll(CARD_WIDTH)}>{"<"}</button>
             {/* <div ref={containerRef} className="flex flex-1 flex-row gap-x-2 engagement-dashboard-card-container"> */}
-            <div ref={containerRef} className="flex flex-col gap-y-3 sm:flex-1 sm:flex-row sm:gap-x-2 engagement-dashboard-card-container">
+            <div ref={containerRef} className="flex flex-col gap-y-3 sm:flex-row sm:gap-x-2 engagement-dashboard-card-container">
                 {
                     messages.map((review, index: number) => (
 
